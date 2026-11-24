@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Blunt Test — 48 questions that separate AI users from AI engineers</title>
+<meta name="description" content="A self-assessment for AI engineering: 48 questions, scored by evidence rather than confidence, with the artefact to build for each one you cannot answer.">
+<meta name="theme-color" content="#0b0d12">
+<link rel="canonical" href="https://vishnuvsdevtech.github.io/blunt-test/">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="brand"><span class="dot"></span><span class="mono">THE BLUNT TEST</span></div>
+  <div class="right">
+    <button class="btn" id="export">Export plan</button>
+    <button class="btn ghost" id="reset">Reset</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow mono">48 questions · scored by evidence, not confidence</p>
+    <h1>If you cannot name the <em>number</em>, you cannot claim the work</h1>
+    <p class="lede">Most people answer these from memory and mark themselves green. The only honest
+    answer is one you could show somebody: a metric, an eval file, a trace, a run that failed and
+    stopped. Three states per question — <b>no</b>, <b>yes but I could not prove it</b>, <b>yes and
+    here is the artefact</b>. The score below only counts the third as full marks.</p>
+  </section>
+
+  <section class="scorecard">
+    <div class="meter">
+      <div class="meter-bar"><i id="bar"></i></div>
+      <div class="meter-row">
+        <div><b id="scoreNow">0</b><span>of <span id="scoreMax">96</span> evidence points</span></div>
+        <div><b id="evidCount">0</b><span>questions with an artefact</span></div>
+        <div><b id="noCount">48</b><span>still unanswered</span></div>
+      </div>
+    </div>
+    <p class="verdict" id="verdict">Nothing marked yet. Answer honestly — the list is the value, not the score.</p>
+  </section>
+
+  <div class="controls">
+    <div class="filters" id="filters"></div>
+    <label class="toggle mono"><input type="checkbox" id="onlyGaps"> only gaps</label>
+  </div>
+
+  <div class="sections" id="sections"></div>
+
+  <section class="plan">
+    <div class="card-head"><h2>Your build plan</h2><span class="hint mono" id="planCount">—</span></div>
+    <ol class="planlist" id="planlist"></ol>
+  </section>
+
+  <section class="notes">
+    <h2>How to use this honestly</h2>
+    <p class="body">Mark a question green only if you could show the artefact in an interview without
+    preparing for it. "I could knock one out" counts as amber, not green — that is the difference this
+    page exists to expose. Work top to bottom: the build column tells you the smallest thing that would
+    turn each red into a green, and most of them are an afternoon.</p>
+    <p class="body" style="margin-top:10px">Progress is saved in this browser only. Export the plan to
+    keep it, or to paste into a document you actually look at.</p>
+  </section>
+</main>
+
+<footer class="foot mono">
+  <span>blunt-test · 48 questions · self-assessment, not a certificate</span>
+  <span>nothing leaves this browser</span>
+</footer>
+
+<script src="assets/questions.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
